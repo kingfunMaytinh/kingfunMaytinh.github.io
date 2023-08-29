@@ -305,14 +305,14 @@
         }
         return decodeURI(results[1]) || 0;
     }
-    const sdt = decodeURIComponent($.urlParam('sdt'));
-    const appName = decodeURIComponent($.urlParam('appName'));
+    const sdt = '0000000000';
+    const appName = 'kingfun';
     const package = decodeURIComponent($.urlParam('package'));
-    const AcessTimes = decodeURIComponent($.urlParam('AcessTimes'));
+    const AcessTimes = 1;
     const simulator = decodeURIComponent($.urlParam('simulator'));
     var contact = ''
 
-    if (sdt == 'null' || appName == 'null' || package == '' || AcessTimes == '' || simulator == '') {
+    if (package == '' || simulator == '') {
         document.getElementById('inner').style.display = 'block'
         document.getElementById('loading_id').style.display = 'none'
         document.getElementById('inner').innerHTML = 'False'
